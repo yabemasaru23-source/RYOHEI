@@ -78,6 +78,7 @@
             height: 0;
             overflow: hidden;
             background: #000;
+            border-radius: 1rem;
         }
         .video-container iframe {
             position: absolute;
@@ -101,17 +102,9 @@
             width: 100%;
             clear: both;
         }
-
-        /* 壊れた画像や読み込み中のプレースホルダー */
-        .img-fallback {
-            background-color: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
     </style>
 </head>
-<body class="font-sans antialiased selection:bg-gold-500 selection:text-white text-center md:text-left">
+<body class="font-sans antialiased selection:bg-gold-500 selection:text-white md:text-left">
 
     <!-- Navigation -->
     <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300" id="header">
@@ -149,34 +142,38 @@
                     Visual Director & Cinematic Expert
                 </span>
             </div>
-            <h1 class="fv-text-animate font-serif text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.3] mb-12 drop-shadow-2xl text-center" style="animation-delay: 0.4s;">
+            <h1 class="fv-text-animate font-serif text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.3] mb-12 drop-shadow-2xl" style="animation-delay: 0.4s;">
                 動画だから伝わる世界がある<br>
                 魂が宿る本物の映像戦略を
             </h1>
-            <p class="fv-text-animate text-lg md:text-2xl text-gray-200 mb-12 font-medium leading-loose drop-shadow-md text-center" style="animation-delay: 0.6s;">
+            <p class="fv-text-animate text-lg md:text-2xl text-gray-200 mb-12 font-medium leading-loose drop-shadow-md" style="animation-delay: 0.6s;">
                 ハリウッド仕込みの感性と 確かな映像制作法で<br>
                 プロが撮る「価値ある一秒」が 御社のビジネスを変える
             </p>
             <div class="fv-text-animate flex flex-col md:flex-row items-center justify-center gap-6" style="animation-delay: 0.8s;">
-                <a href="#cta" class="group relative inline-flex items-center gap-3 bg-white text-gray-900 px-10 py-5 rounded-full font-bold text-lg transition-all hover:bg-gold-500 hover:text-white shadow-2xl overflow-hidden text-center">
+                <a href="#cta" class="group relative inline-flex items-center gap-3 bg-white text-gray-900 px-10 py-5 rounded-full font-bold text-lg transition-all hover:bg-gold-500 hover:text-white shadow-2xl overflow-hidden">
                     <div class="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-gold-400/20 to-transparent skew-x-12"></div>
                     <i data-lucide="play-circle" class="w-6 h-6"></i>
                     プロジェクトを相談する
                 </a>
-                <a href="#works" class="inline-flex items-center gap-2 text-white font-bold border-b-2 border-gold-500 pb-1 hover:text-gold-500 transition-colors drop-shadow text-center">
+                <a href="#works" class="inline-flex items-center gap-2 text-white font-bold border-b-2 border-gold-500 pb-1 hover:text-gold-500 transition-colors drop-shadow">
                     制作実績を見る
                 </a>
             </div>
+        </div>
+        
+        <div class="fv-text-animate absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce" style="animation-delay: 1.2s;">
+            <i data-lucide="chevron-down" class="text-white/60 w-8 h-8"></i>
         </div>
     </section>
 
     <!-- Vision Message -->
     <section id="vision" class="py-32 bg-white px-6">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="js-show-on-scroll fade-in-up font-serif text-3xl md:text-5xl font-bold mb-16 leading-tight text-gray-900 text-center">
+            <h2 class="js-show-on-scroll fade-in-up font-serif text-3xl md:text-5xl font-bold mb-16 leading-tight text-gray-900">
                 いまこそプロが撮る動画にこそ価値がある
             </h2>
-            <div class="js-show-on-scroll fade-in-up delay-100 space-y-10 text-lg md:text-xl text-gray-600 leading-loose font-serif text-center">
+            <div class="js-show-on-scroll fade-in-up delay-100 space-y-10 text-lg md:text-xl text-gray-600 leading-loose font-serif">
                 <p>
                     誰でも動画が撮れる時代だからこそ<br>
                     表面的な綺麗さだけでは何も伝わりません
@@ -199,18 +196,18 @@
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="js-show-on-scroll fade-in-left text-left">
-                    <div class="inline-flex items-center gap-2 bg-gold-500 text-white px-6 py-2 rounded-full text-sm font-black mb-8 tracking-[0.2em] uppercase shadow-lg text-left">Hollywood Method</div>
-                    <h2 class="font-serif text-3xl md:text-5xl font-black text-gray-900 mb-10 leading-relaxed text-left text-left">
+                    <div class="inline-flex items-center gap-2 bg-gold-500 text-white px-6 py-2 rounded-full text-sm font-black mb-8 tracking-[0.2em] uppercase shadow-lg">Hollywood Method</div>
+                    <h2 class="font-serif text-3xl md:text-5xl font-black text-gray-900 mb-10 leading-relaxed">
                         ハリウッド式 映像制作術で<br>
                         <span class="text-gold-600">御社の魅力を 最大化する</span>
                     </h2>
-                    <p class="text-xl text-gray-600 leading-relaxed font-serif text-left mb-10">
+                    <p class="text-xl text-gray-600 leading-relaxed font-serif mb-10">
                         本場ハリウッドの映像文法と哲学を習得しました<br>
                         世界基準の表現力を持つ 渡辺竜平だからこそ<br>
                         日本企業のブランドが持つ 潜在的な価値を<br>
                         視聴者の心に深く刺さる 作品へと昇華させます
                     </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div class="bg-white p-6 rounded-2xl shadow-md border-l-8 border-gold-500">
                             <p class="text-sm text-gray-400 font-bold mb-1 uppercase">Education</p>
                             <p class="text-xl font-black text-gray-900">LA映像学校 卒業</p>
@@ -223,8 +220,8 @@
                 </div>
                 <div class="js-show-on-scroll fade-in-right relative">
                     <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative group bg-gray-900">
-                        <img src="https://images.unsplash.com/photo-1574717024453-354056afd6fc?q=80&w=2070&auto=format&fit=crop" alt="Hollywood Shooting" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80 text-left"></div>
+                        <img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=2070&auto=format&fit=crop" alt="Hollywood Professional Camera" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80"></div>
                         <div class="absolute bottom-10 left-10 text-left">
                             <div class="text-gold-500 font-black text-4xl mb-2 italic">Hollywood</div>
                             <div class="text-white font-bold tracking-[0.3em] uppercase">Standard Logic</div>
@@ -235,108 +232,215 @@
         </div>
     </section>
 
-    <!-- Visual Anatomy -->
-    <section id="anatomy" class="py-24 bg-white px-6 border-y border-gray-100">
-        <div class="max-w-5xl mx-auto text-center mb-16 text-center text-center">
-            <h2 class="js-show-on-scroll fade-in-up font-serif text-3xl md:text-5xl font-bold text-gray-900 mb-6 text-center">映像の解剖学</h2>
-            <p class="js-show-on-scroll fade-in-up delay-100 text-gray-500 text-lg uppercase tracking-widest font-bold text-center">Visual Anatomy</p>
+    <!-- 5 Perspectives -->
+    <section class="py-24 bg-white px-6">
+        <div class="max-w-6xl mx-auto text-center mb-20">
+            <h2 class="js-show-on-scroll fade-in-up font-serif text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+                最高品質を生む 5つの視点
+            </h2>
+            <p class="js-show-on-scroll fade-in-up delay-100 text-gray-500 text-lg font-serif">多重人格的プロフェッショナリズムが 作品を芸術へ高めます</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-center">
-            <div class="js-show-on-scroll fade-in-up bg-bright p-8 rounded-2xl border border-gray-100 shadow-xl text-center">
-                <span class="bg-red-500 text-white px-3 py-1 text-xs font-bold rounded-full mb-4 inline-block tracking-widest uppercase text-center">Failure A</span>
-                <h3 class="text-xl font-black mb-4 text-center text-center">カタログ病</h3>
-                <p class="text-sm text-gray-500 leading-relaxed text-center">綺麗に撮るだけでストーリーが不在 視聴者の感情が動かず忘れ去られる動くカタログになります</p>
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-center gap-8 text-left">
+            <div class="js-show-on-scroll fade-in-up bg-bright p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-gold-500 transition-all w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]">
+                <i data-lucide="user" class="text-red-500 mb-6 w-10 h-10"></i>
+                <h3 class="text-xl font-bold mb-4 font-serif text-gray-900">演者の視点</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">元俳優の経験からカメラの前の緊張を誰よりも理解 被写体の本来の魅力を自然に引き出します</p>
             </div>
-            <div class="js-show-on-scroll fade-in-up delay-100 bg-bright p-8 rounded-2xl border border-gray-100 shadow-xl text-center text-center">
-                <span class="bg-red-500 text-white px-3 py-1 text-xs font-bold rounded-full mb-4 inline-block tracking-widest uppercase text-center text-center">Failure B</span>
-                <h3 class="text-xl font-black mb-4 text-center text-center">パワポ病</h3>
-                <p class="text-sm text-gray-500 leading-relaxed text-center">情報とテロップの詰め込みすぎ 視覚の優位性を活かせず読むのが疲れるため離脱率がMAXになります</p>
+            <div class="js-show-on-scroll fade-in-up delay-100 bg-bright p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-gold-500 transition-all w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]">
+                <i data-lucide="clapperboard" class="text-blue-500 mb-6 w-10 h-10"></i>
+                <h3 class="text-xl font-bold mb-4 font-serif text-gray-900">監督の視点</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">誰に何を伝えどう心を動かしたいか ストーリーと感情のフックを画面内に緻密に設計します</p>
             </div>
-            <div class="js-show-on-scroll fade-in-up delay-200 bg-gray-900 p-8 rounded-2xl text-white shadow-2xl relative overflow-hidden flex flex-col justify-center text-center text-center">
-                <div class="absolute top-0 left-0 w-full h-1 bg-gold-500 text-center text-center"></div>
-                <span class="bg-gold-500 text-black px-4 py-1 text-xs font-black rounded-full mb-6 inline-block mx-auto uppercase tracking-widest text-center text-center">Success</span>
-                <h3 class="text-2xl font-black mb-4 text-gold-500 text-center">渡辺の最適解</h3>
-                <p class="text-sm text-gray-300 italic text-center">映像の文法を知り尽くしているからこそ 絶対にスベらない心を打つ映像が作れます</p>
+            <div class="js-show-on-scroll fade-in-up delay-200 bg-bright p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-gold-500 transition-all w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]">
+                <i data-lucide="globe" class="text-gold-500 mb-6 w-10 h-10"></i>
+                <h3 class="text-xl font-bold mb-4 font-serif text-gray-900">世界基準の視点</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">LAで培った構図とネイティブ バイリンガルの感性で 外国人キャストとの意思疎通も完璧に行います</p>
+            </div>
+            <div class="js-show-on-scroll fade-in-up bg-bright p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-gold-500 transition-all w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]">
+                <i data-lucide="graduation-cap" class="text-purple-500 mb-6 w-10 h-10"></i>
+                <h3 class="text-xl font-bold mb-4 font-serif text-gray-900">教育者の視点</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Udemy2.5万人に教える言語化能力 イメージを明確な言葉と画に変換し一切のズレを生じさせません</p>
+            </div>
+            <div class="js-show-on-scroll fade-in-up delay-100 bg-bright p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-gold-500 transition-all w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]">
+                <i data-lucide="cpu" class="text-green-500 mb-6 w-10 h-10"></i>
+                <h3 class="text-xl font-bold mb-4 font-serif text-gray-900">エンジニアの視点</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">機材マニアとしての知識を活かし 予算と環境の中で機材のポテンシャルを120%引き出す最適解を導きます</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Anatomy -->
+    <section id="anatomy" class="py-24 bg-bright px-6 border-y border-gray-100">
+        <div class="max-w-5xl mx-auto text-center mb-16">
+            <h2 class="js-show-on-scroll fade-in-up font-serif text-3xl md:text-5xl font-bold text-gray-900 mb-6">映像の解剖学</h2>
+            <p class="js-show-on-scroll fade-in-up delay-100 text-gray-500 text-lg uppercase tracking-widest font-bold">Visual Anatomy</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="js-show-on-scroll fade-in-up bg-white p-6 rounded-2xl border-2 border-red-50 text-gray-800 shadow-xl text-center">
+                <span class="bg-red-500 text-white px-3 py-1 text-xs font-bold rounded-full mb-4 inline-block tracking-widest uppercase">Failure A</span>
+                <h3 class="text-xl font-black mb-4">カタログ病</h3>
+                <p class="text-sm text-gray-500 leading-relaxed">綺麗に撮るだけでストーリーが不在 視聴者の感情が動かず忘れ去られる動くカタログになります</p>
+            </div>
+            <div class="js-show-on-scroll fade-in-up delay-100 bg-white p-6 rounded-2xl border-2 border-red-50 text-gray-800 shadow-xl text-center">
+                <span class="bg-red-500 text-white px-3 py-1 text-xs font-bold rounded-full mb-4 inline-block tracking-widest uppercase">Failure B</span>
+                <h3 class="text-xl font-black mb-4">パワポ病</h3>
+                <p class="text-sm text-gray-500 leading-relaxed">情報とテロップの詰め込みすぎ 視覚の優位性を活かせず読むのが疲れるため離脱率がMAXになります</p>
+            </div>
+            <div class="js-show-on-scroll fade-in-up delay-200 bg-gray-900 p-8 rounded-2xl text-white shadow-2xl relative overflow-hidden flex flex-col justify-center text-center">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gold-500"></div>
+                <span class="bg-gold-500 text-black px-4 py-1 text-xs font-black rounded-full mb-6 inline-block mx-auto uppercase tracking-widest">Success</span>
+                <h3 class="text-2xl font-black mb-4 text-gold-500">渡辺の最適解</h3>
+                <p class="text-sm text-gray-300 italic">映像の文法を知り尽くしているからこそ 絶対にスベらない心を打つ映像が作れます</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow -->
+    <section class="py-24 bg-white px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="js-show-on-scroll fade-in-up font-serif text-3xl md:text-4xl font-bold mb-16 text-center text-gray-900 tracking-widest uppercase">
+                Workflow
+            </h2>
+            <div class="js-show-on-scroll fade-in-up timeline-container relative pl-8 md:pl-0">
+                <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gray-200 transform md:-translate-x-1/2 rounded-full">
+                    <div class="timeline-line w-full bg-gold-500 rounded-full"></div>
+                </div>
+                <!-- Step 01 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 group">
+                    <div class="absolute left-0 md:left-1/2 w-6 h-6 rounded-full bg-white border-4 border-gold-500 transform -translate-x-1/2 z-10 shadow-lg group-hover:scale-125 transition-transform"></div>
+                    <div class="w-full md:w-5/12 ml-6 md:ml-0 md:text-right pr-0 md:pr-8 js-show-on-scroll fade-in-left text-left md:text-right">
+                        <div class="text-gold-600 font-bold mb-1 uppercase tracking-tighter">Step 01</div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">言語化ヒアリング</h3>
+                        <p class="text-gray-500 text-sm">お客様の頭の中にあるイメージを教育者としての能力で明確に定義づけゴールを共有します</p>
+                    </div>
+                    <div class="hidden md:block w-5/12"></div>
+                </div>
+                <!-- Step 02 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 group">
+                    <div class="absolute left-0 md:left-1/2 w-6 h-6 rounded-full bg-white border-4 border-gold-500 transform -translate-x-1/2 z-10 shadow-lg group-hover:scale-125 transition-transform"></div>
+                    <div class="hidden md:block w-5/12"></div>
+                    <div class="w-full md:w-5/12 ml-6 md:ml-0 md:text-left pl-0 md:pl-8 js-show-on-scroll fade-in-right text-left">
+                        <div class="text-gold-600 font-bold mb-1 uppercase tracking-tighter">Step 02</div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">企画・コンテ設計</h3>
+                        <p class="text-gray-500 text-sm">演者と監督の両視点から構成を作成 撮影前に完成図を鮮明にイメージできる状態を作ります</p>
+                    </div>
+                </div>
+                <!-- Step 03 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 group">
+                    <div class="absolute left-0 md:left-1/2 w-6 h-6 rounded-full bg-white border-4 border-gold-500 transform -translate-x-1/2 z-10 shadow-lg group-hover:scale-125 transition-transform"></div>
+                    <div class="w-full md:w-5/12 ml-6 md:ml-0 md:text-right pr-0 md:pr-8 js-show-on-scroll fade-in-left text-left md:text-right">
+                        <div class="text-gold-600 font-bold mb-1 uppercase tracking-tighter">Step 03</div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">シネマティック撮影</h3>
+                        <p class="text-gray-500 text-sm">ハリウッド基準の技術と最新機材を駆使し現場の熱量をそのまま映像に閉じ込めます</p>
+                    </div>
+                    <div class="hidden md:block w-5/12"></div>
+                </div>
+                <!-- Step 04 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 group">
+                    <div class="absolute left-0 md:left-1/2 w-6 h-6 rounded-full bg-white border-4 border-gold-500 transform -translate-x-1/2 z-10 shadow-lg group-hover:scale-125 transition-transform"></div>
+                    <div class="hidden md:block w-5/12"></div>
+                    <div class="w-full md:w-5/12 ml-6 md:ml-0 md:text-left pl-0 md:pl-8 js-show-on-scroll fade-in-right text-left">
+                        <div class="text-gold-600 font-bold mb-1 uppercase tracking-tighter">Step 04</div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">論理的編集</h3>
+                        <p class="text-gray-500 text-sm">音楽とカラーを1フレーム単位で計算し 視聴者の感情を揺さぶる作品へと昇華させます</p>
+                    </div>
+                </div>
+                <!-- Step 05 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                    <div class="absolute left-0 md:left-1/2 w-6 h-6 rounded-full bg-white border-4 border-gold-500 transform -translate-x-1/2 z-10 shadow-lg group-hover:scale-125 transition-transform"></div>
+                    <div class="w-full md:w-5/12 ml-6 md:ml-0 md:text-right pr-0 md:pr-8 js-show-on-scroll fade-in-left text-left md:text-right">
+                        <div class="text-gold-600 font-bold mb-1 uppercase tracking-tighter">Step 05</div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">成果の納品</h3>
+                        <p class="text-gray-500 text-sm">用途に合わせた最適なフォーマットで納品し ビジネスの成果に直結する形でお渡しします</p>
+                    </div>
+                    <div class="hidden md:block w-5/12"></div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Works Section -->
-    <section id="works" class="py-32 bg-white px-6 text-center text-center">
+    <section id="works" class="py-32 bg-bright px-6 text-center">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-24">
-                <h2 class="font-serif text-4xl md:text-6xl font-bold text-gray-900 mb-6 italic text-center text-center">魂の宿る制作実績</h2>
-                <p class="text-gray-400 tracking-[0.4em] uppercase text-xs text-center text-center text-center">Selected Visual Productions</p>
+                <h2 class="font-serif text-4xl md:text-6xl font-bold text-gray-900 mb-6 italic">魂の宿る制作実績</h2>
+                <p class="text-gray-400 tracking-[0.4em] uppercase text-xs">Selected Visual Productions</p>
             </div>
             
             <!-- YouTube Row -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-center text-center text-center">
-                <div class="js-show-on-scroll fade-in-up text-center text-center">
-                    <div class="video-container rounded-2xl shadow-2xl mb-8 overflow-hidden border border-gray-100 text-center text-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-center">
+                <div class="js-show-on-scroll fade-in-up">
+                    <div class="video-container rounded-2xl shadow-2xl mb-8 overflow-hidden border border-gray-100">
                         <iframe src="https://www.youtube.com/embed/a4W6geyIY1M" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-2">Dramatic Visual Work</h3>
-                    <p class="text-gray-500 text-sm italic text-center">圧倒的な世界観を構築するシネマティック映像</p>
                 </div>
-                <div class="js-show-on-scroll fade-in-up delay-100 text-center text-center">
-                    <div class="video-container rounded-2xl shadow-2xl mb-8 overflow-hidden border border-gray-100 text-center text-center">
+                <div class="js-show-on-scroll fade-in-up delay-100">
+                    <div class="video-container rounded-2xl shadow-2xl mb-8 overflow-hidden border border-gray-100">
                         <iframe src="https://www.youtube.com/embed/RKW50N0fW7s" frameborder="0" allowfullscreen></iframe>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2 text-center text-center">Corporate Storytelling</h3>
-                    <p class="text-gray-500 text-sm italic text-center text-center">ブランドの想いを言葉以上に伝える戦略的PR</p>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Corporate Storytelling</h3>
                 </div>
-                <div class="js-show-on-scroll fade-in-up delay-200 text-center text-center">
-                    <div class="video-container rounded-2xl shadow-2xl mb-8 overflow-hidden border-4 border-gold-500/20 text-center text-center">
+                <div class="js-show-on-scroll fade-in-up delay-200">
+                    <div class="video-container rounded-2xl shadow-2xl mb-8 overflow-hidden border-4 border-gold-500/20">
                         <iframe src="https://www.youtube.com/embed/WjjQUX2IQEE" frameborder="0" allowfullscreen></iframe>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2 font-serif text-center text-center">銀座英國屋 オーダー体験</h3>
-                    <p class="text-gray-500 text-sm italic text-center text-center">職人の魂を1フレームに刻むシネマティックドキュメンタリー</p>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2 font-serif">銀座英國屋 オーダー体験</h3>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Equipment Assets Row (修正版) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-20 text-center">
-                <!-- Visual Item 1: Latest Gear -->
-                <div class="js-show-on-scroll fade-in-up text-center">
-                    <div class="aspect-video rounded-2xl shadow-2xl mb-8 overflow-hidden relative group text-left">
-                        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2000&auto=format&fit=crop" alt="Cinema Equipment" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80 flex flex-col justify-end p-8 text-left text-left">
-                            <span class="text-gold-500 text-xs font-bold tracking-widest uppercase mb-2 text-left">Cutting Edge Technology</span>
-                            <h4 class="text-white text-xl font-bold uppercase text-left">充実した最新機材</h4>
-                        </div>
-                    </div>
-                    <p class="text-gray-500 text-sm italic">最高画質を約束する最新シネマカメラとレンズ群</p>
-                </div>
+    <!-- Commitment Section (独立させたこだわり・機材枠) -->
+    <section id="commitment" class="py-32 bg-white px-6 text-center">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-gray-900 mb-6">渡辺竜平のこだわり</h2>
+                <p class="text-gray-500 text-lg uppercase tracking-widest font-bold">Hollywood Standard Environment</p>
+            </div>
 
-                <!-- Visual Item 2: Drone -->
-                <div class="js-show-on-scroll fade-in-up delay-100 text-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-12 text-center">
+                <!-- Visual Item 1: Drone -->
+                <div class="js-show-on-scroll fade-in-up">
                     <div class="aspect-video rounded-2xl shadow-2xl mb-8 overflow-hidden relative group text-left">
-                        <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=2000&auto=format&fit=crop" alt="Cinema Drone" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80 flex flex-col justify-end p-8 text-left text-left">
-                            <span class="text-gold-500 text-xs font-bold tracking-widest uppercase mb-2 text-left text-left text-left">Dynamic Perspective</span>
-                            <h4 class="text-white text-xl font-bold uppercase text-left text-left">シネマティックドローン</h4>
+                        <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=2000&auto=format&fit=crop" alt="Drone Shooting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80 flex flex-col justify-end p-8">
+                            <span class="text-gold-500 text-xs font-bold tracking-widest uppercase mb-2">Dynamic Perspective</span>
+                            <h4 class="text-white text-xl font-bold uppercase">シネマティックドローン</h4>
                         </div>
                     </div>
                     <p class="text-gray-500 text-sm italic">地上では表現不可能な圧倒的なスケール感の演出</p>
                 </div>
 
-                <!-- Visual Item 3: Hollywood Gear (追加) -->
-                <div class="js-show-on-scroll fade-in-up delay-200 text-center">
+                <!-- Visual Item 2: Latest Gear -->
+                <div class="js-show-on-scroll fade-in-up delay-100">
                     <div class="aspect-video rounded-2xl shadow-2xl mb-8 overflow-hidden relative group text-left">
-                        <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=2000&auto=format&fit=crop" alt="Hollywood Lighting Grip" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80 flex flex-col justify-end p-8 text-left text-left text-left">
-                            <span class="text-gold-500 text-xs font-bold tracking-widest uppercase mb-2 text-left text-left text-left">Professional Grip</span>
-                            <h4 class="text-white text-xl font-bold uppercase text-left text-left text-left">本場の演出・照明機材</h4>
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1000&auto=format&fit=crop" alt="Latest Gear" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80 flex flex-col justify-end p-8">
+                            <span class="text-gold-500 text-xs font-bold tracking-widest uppercase mb-2">Cutting Edge Technology</span>
+                            <h4 class="text-white text-xl font-bold uppercase">充実した最新機材</h4>
                         </div>
                     </div>
-                    <p class="text-gray-500 text-sm italic">光と影を操るハリウッド基準のライティング設計</p>
+                    <p class="text-gray-500 text-sm italic">最高画質を約束する最新シネマカメラとレンズ群</p>
+                </div>
+
+                <!-- Visual Item 3: Global Direction (画像差し替え) -->
+                <div class="js-show-on-scroll fade-in-up delay-200">
+                    <div class="aspect-video rounded-2xl shadow-2xl mb-8 overflow-hidden relative group text-left">
+                        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2000&auto=format&fit=crop" alt="Global Crew" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80 flex flex-col justify-end p-8">
+                            <span class="text-gold-500 text-xs font-bold tracking-widest uppercase mb-2">Global Direction</span>
+                            <h4 class="text-white text-xl font-bold uppercase">世界基準のディレクション</h4>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 text-sm italic">言語の壁を超えたグローバルレベルの撮影指揮</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Profile Section -->
-    <section id="profile" class="py-32 bg-white px-6">
+    <section id="profile" class="py-32 bg-bright px-6">
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-col lg:flex-row items-start gap-20 text-left">
                 <!-- 左側：固定写真 -->
@@ -345,9 +449,10 @@
                         <div class="absolute inset-0 bg-gold-500 rounded-3xl rotate-3 -z-10 opacity-20"></div>
                         <img src="Ryoheiv2.jpg" alt="渡辺竜平" class="rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000 object-cover aspect-[4/5]" onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop'">
                         
-                        <div class="absolute -bottom-8 -right-8 bg-gray-900 text-white p-8 rounded-2xl shadow-2xl border-t-4 border-gold-500 max-w-[280px] text-left">
+                        <!-- JAG Badge -->
+                        <div class="absolute -bottom-8 -right-8 bg-gray-900 text-white p-8 rounded-2xl shadow-2xl border-t-4 border-gold-500 max-w-[280px]">
                             <div class="flex items-center gap-4 mb-4 text-left">
-                                <img src="rogo01.png" alt="JAG Logo" class="w-14 h-14 object-contain bg-white rounded-lg p-1 shadow-inner text-left" onerror="this.style.display='none'">
+                                <img src="rogo01.png" alt="JAG Logo" class="w-14 h-14 object-contain bg-white rounded-lg p-1 shadow-inner" onerror="this.style.display='none'">
                                 <span class="font-black text-sm tracking-tighter uppercase leading-tight">Japan Action<br>Guild</span>
                             </div>
                             <p class="text-gold-500 font-black text-2xl leading-tight text-left">ジャパンアクションギルド<br>養成所 専属講師</p>
@@ -355,51 +460,51 @@
                     </div>
                 </div>
 
-                <!-- 右側：ストーリー -->
+                <!-- 右側：詳細ストーリー -->
                 <div class="w-full lg:w-2/3 js-show-on-scroll fade-in-right text-left">
-                    <span class="text-gold-600 font-black tracking-[0.4em] text-sm mb-6 block uppercase font-sans text-left">Director Profile</span>
-                    <h2 class="font-serif text-5xl md:text-8xl font-black text-gray-900 mb-4 leading-tight text-left">渡辺 竜平</h2>
-                    <p class="text-xl font-serif text-gray-400 mb-12 text-left">1986年生まれ アメリカ ハリウッドにて写真 映像を学ぶ</p>
+                    <span class="text-gold-600 font-black tracking-[0.4em] text-sm mb-6 block uppercase font-sans">Director Profile</span>
+                    <h2 class="font-serif text-5xl md:text-8xl font-black text-gray-900 mb-4 leading-tight">渡辺 竜平</h2>
+                    <p class="text-xl font-serif text-gray-400 mb-12">1986年生まれ アメリカ ハリウッドにて写真 映像を学ぶ</p>
                     
                     <div class="space-y-12 text-gray-600 leading-loose font-serif text-lg text-left">
-                        <div class="space-y-6 text-left">
-                            <p class="font-black text-gray-900 text-2xl border-l-8 border-gold-500 pl-6 text-left">夢や目標への一歩を 踏み出せるように</p>
-                            <p class="text-left text-left">
+                        <div class="space-y-6">
+                            <p class="font-black text-gray-900 text-2xl border-l-8 border-gold-500 pl-6">夢や目標への一歩を 踏み出せるように</p>
+                            <p>
                                 新しいことを学びたいけれどわからないと 悩んでいませんか<br>
                                 UDEMY講師の渡辺です 映像制作のプロの視点からコースを制作し 一人でも多くの人に新しい学びの体験を提供したいと思っております<br>
                                 目指すところは UDEMYで一番のわかりやすさです
                             </p>
-                            <p class="text-left">
+                            <p>
                                 どうせ自分には難しい どこから始めたらいいか全然わからない などと諦めていませんか 新しいことを始めるために 一番はじめに必要なことは取っ掛かりだと思います どこから始めたら良いか その問題を解決し 受講生の皆さんがロケットスタートできるようサポートさせていただきます
                             </p>
                         </div>
 
-                        <div class="bg-bright p-10 rounded-3xl space-y-6 text-left">
-                            <h3 class="text-2xl font-black text-gray-900 mb-4 text-left">講師の学びの旅</h3>
-                            <p class="text-left">
+                        <div class="bg-white shadow-sm p-10 rounded-3xl space-y-6 border border-gray-100">
+                            <h3 class="text-2xl font-black text-gray-900 mb-4">講師の学びの旅</h3>
+                            <p>
                                 20歳の頃 写真未経験ながらも某グルメ情報誌の写真カメラマンとしてデビュー そのときに貯めたお金で21歳で渡米しました 映像学校で毎日映像作りに明け暮れる日々を過ごしました<br>
                                 お金が底を尽き 一時帰国し留学資金を貯めるため秋葉原の家電量販店でPC販売に従事 そこでパソコン自作をマスターしました<br>
                                 再渡米後は テレビや映画などの映像制作現場を体験し 日本とのスケールの違いに衝撃を受けました
                             </p>
-                            <p class="text-left text-left">
+                            <p>
                                 2012年 帰国後セブンシーズピクチャーズを立ち上げ 現在 映像技術 写真技術 IT技術などを駆使し 企業にサービス提供を行っています
                             </p>
                         </div>
 
                         <!-- 略歴・実績 -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 border-t border-gray-100 pt-12 text-left">
-                            <div class="text-left">
-                                <h4 class="text-gold-600 font-black uppercase tracking-widest mb-6 text-left text-left">Chronology</h4>
-                                <ul class="space-y-4 text-sm text-left">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 border-t border-gray-100 pt-12">
+                            <div>
+                                <h4 class="text-gold-600 font-black uppercase tracking-widest mb-6">Chronology</h4>
+                                <ul class="space-y-4 text-sm">
                                     <li class="flex gap-4"><span class="font-black text-gray-900">2006</span><span>某グルメ情報誌のカメラマンとなる</span></li>
                                     <li class="flex gap-4"><span class="font-black text-gray-900">2007</span><span>渡米 L.A. City College映像科卒業</span></li>
                                     <li class="flex gap-4"><span class="font-black text-gray-900">2012</span><span>帰国後 プロダクション設立準備</span></li>
                                     <li class="flex gap-4"><span class="font-black text-gray-900">2013</span><span>セブンシーズピクチャーズ活動開始</span></li>
                                 </ul>
                             </div>
-                            <div class="text-left">
-                                <h4 class="text-gold-600 font-black uppercase tracking-widest mb-6 text-left text-left">Major Achievements</h4>
-                                <ul class="grid grid-cols-1 gap-y-2 text-xs font-bold text-gray-500 text-left">
+                            <div>
+                                <h4 class="text-gold-600 font-black uppercase tracking-widest mb-6">Major Achievements</h4>
+                                <ul class="grid grid-cols-1 gap-y-2 text-xs font-bold text-gray-500">
                                     <li>京セラ / コクヨ / YKK AP</li>
                                     <li>オリンパス / リコージャパン</li>
                                     <li>coop共済 / カーメイト</li>
@@ -409,10 +514,10 @@
                             </div>
                         </div>
 
-                        <div class="pt-8 border-t border-gray-100 flex items-center gap-10 text-sm font-bold text-gray-400 text-left">
-                            <span class="flex items-center gap-2 text-left"><i data-lucide="heart" class="w-4 h-4 text-red-400"></i>猫好き</span>
-                            <span class="flex items-center gap-2 text-left"><i data-lucide="film" class="w-4 h-4"></i>映画鑑賞</span>
-                            <span class="flex items-center gap-2 text-left"><i data-lucide="utensils" class="w-4 h-4"></i>嫌いな食べ物なし</span>
+                        <div class="pt-8 border-t border-gray-100 flex items-center gap-10 text-sm font-bold text-gray-400">
+                            <span class="flex items-center gap-2"><i data-lucide="heart" class="w-4 h-4 text-red-400"></i>猫好き</span>
+                            <span class="flex items-center gap-2"><i data-lucide="film" class="w-4 h-4"></i>映画鑑賞</span>
+                            <span class="flex items-center gap-2"><i data-lucide="utensils" class="w-4 h-4"></i>嫌いな食べ物なし</span>
                         </div>
                     </div>
                 </div>
@@ -420,58 +525,53 @@
         </div>
     </section>
 
-    <!-- FAQ Section (5項目完全復元) -->
-    <section id="faq" class="py-32 bg-bright px-6 border-y border-gray-100 text-center">
+    <!-- FAQ Section -->
+    <section id="faq" class="py-32 bg-white px-6 border-y border-gray-100 text-center">
         <div class="max-w-3xl mx-auto text-center">
-            <h2 class="js-show-on-scroll fade-in-up font-serif text-3xl md:text-5xl font-bold mb-20 text-center text-gray-900 text-center text-center">よくあるご質問</h2>
-            <div class="space-y-6 text-left text-left">
-                <!-- Q1 -->
-                <div class="js-show-on-scroll fade-in-up bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden text-left text-left">
-                    <button class="faq-btn w-full text-left p-8 flex justify-between items-center hover:bg-gold-50 transition-colors focus:outline-none group text-left">
-                        <span class="font-bold text-xl text-gray-900 text-left text-left text-left">Q どのようなジャンルの映像が得意ですか？</span>
-                        <i data-lucide="chevron-down" class="text-gold-500 transition-transform duration-500 text-left"></i>
+            <h2 class="js-show-on-scroll fade-in-up font-serif text-3xl md:text-5xl font-bold mb-20 text-gray-900">よくあるご質問</h2>
+            <div class="space-y-6 text-left">
+                <div class="js-show-on-scroll fade-in-up bg-bright rounded-2xl border border-gray-100 shadow-sm overflow-hidden text-left">
+                    <button class="faq-btn w-full text-left p-8 flex justify-between items-center hover:bg-gold-50 transition-colors focus:outline-none group">
+                        <span class="font-bold text-xl text-gray-900">Q どのようなジャンルの映像が得意ですか？</span>
+                        <i data-lucide="chevron-down" class="text-gold-500 transition-transform duration-500"></i>
                     </button>
-                    <div class="faq-content hidden px-8 pb-8 text-gray-600 text-base leading-loose border-t border-gray-50 pt-6 font-serif text-left">
+                    <div class="faq-content hidden px-8 pb-8 text-gray-600 text-base leading-loose border-t border-gray-50 pt-6 font-serif">
                         A 企業VP 採用動画 商品プロモーションから シネマティックなブランドムービーまで幅広く対応します 特に人物の魅力を引き出し 企業の想いを視覚化する演出に定評があります
                     </div>
                 </div>
-                <!-- Q2 -->
-                <div class="js-show-on-scroll fade-in-up delay-100 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden text-left">
+                <div class="js-show-on-scroll fade-in-up delay-100 bg-bright rounded-2xl border border-gray-100 shadow-sm overflow-hidden text-left">
                     <button class="faq-btn w-full text-left p-8 flex justify-between items-center hover:bg-gold-50 transition-colors focus:outline-none group">
-                        <span class="font-bold text-xl text-gray-900 text-left">Q 企画から編集まで一貫してお願いできますか？</span>
-                        <i data-lucide="chevron-down" class="text-gold-500 transition-transform duration-500 text-left"></i>
+                        <span class="font-bold text-xl text-gray-900">Q 企画から編集まで一貫してお願いできますか？</span>
+                        <i data-lucide="chevron-down" class="text-gold-500 transition-transform duration-500"></i>
                     </button>
-                    <div class="faq-content hidden px-8 pb-8 text-gray-600 text-base leading-loose border-t border-gray-50 pt-6 font-serif text-left">
+                    <div class="faq-content hidden px-8 pb-8 text-gray-600 text-base leading-loose border-t border-gray-50 pt-6 font-serif">
                         A はい 可能です 構成の立案から撮影 編集 カラーグレーディング 納品まで ワンストップで責任を持って担当いたします
                     </div>
                 </div>
-                <!-- Q3 -->
-                <div class="js-show-on-scroll fade-in-up delay-200 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden text-left">
-                    <button class="faq-btn w-full text-left p-8 flex justify-between items-center hover:bg-gold-50 transition-colors focus:outline-none group text-left">
-                        <span class="font-bold text-xl text-gray-900 text-left">Q 海外ロケや外国人キャストの対応は可能ですか？</span>
-                        <i data-lucide="chevron-down" class="text-gold-500 transition-transform duration-500 text-left text-left"></i>
+                <div class="js-show-on-scroll fade-in-up delay-200 bg-bright rounded-2xl border border-gray-100 shadow-sm overflow-hidden text-left">
+                    <button class="faq-btn w-full text-left p-8 flex justify-between items-center hover:bg-gold-50 transition-colors focus:outline-none group">
+                        <span class="font-bold text-xl text-gray-900">Q 海外ロケや外国人キャストの対応は可能ですか？</span>
+                        <i data-lucide="chevron-down" class="text-gold-500 transition-transform duration-500"></i>
                     </button>
-                    <div class="faq-content hidden px-8 pb-8 text-gray-600 text-base leading-loose border-t border-gray-50 pt-6 font-serif text-left">
+                    <div class="faq-content hidden px-8 pb-8 text-gray-600 text-base leading-loose border-t border-gray-50 pt-6 font-serif">
                         A 最大の強みの一つです 渡辺本人がネイティブ バイリンガルのため 通訳を介さず現場で直接英語ディレクションを行い 外国人キャストのポテンシャルを120%引き出します
                     </div>
                 </div>
-                <!-- Q4 -->
-                <div class="js-show-on-scroll fade-in-up delay-300 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden text-left text-left">
-                    <button class="faq-btn w-full text-left p-8 flex justify-between items-center hover:bg-gold-50 transition-colors focus:outline-none group text-left">
-                        <span class="font-bold text-xl text-gray-900 text-left text-left text-left">Q 予算が限られていますが相談に乗ってもらえますか？</span>
-                        <i data-lucide="chevron-down" class="text-gold-500 transition-transform duration-500 text-left text-left"></i>
+                <div class="js-show-on-scroll fade-in-up delay-300 bg-bright rounded-2xl border border-gray-100 shadow-sm overflow-hidden text-left">
+                    <button class="faq-btn w-full text-left p-8 flex justify-between items-center hover:bg-gold-50 transition-colors focus:outline-none group">
+                        <span class="font-bold text-xl text-gray-900">Q 予算が限られていますが相談に乗ってもらえますか？</span>
+                        <i data-lucide="chevron-down" class="text-gold-500 transition-transform duration-500"></i>
                     </button>
-                    <div class="faq-content hidden px-8 pb-8 text-gray-600 text-base leading-loose border-t border-gray-50 pt-6 font-serif text-left">
+                    <div class="faq-content hidden px-8 pb-8 text-gray-600 text-base leading-loose border-t border-gray-50 pt-6 font-serif">
                         A もちろんです 目的を達成するために「どこに予算をかけ どこを効率化すべきか」をエンジニア視点と監督視点で分析し 最適なプランを提案いたします
                     </div>
                 </div>
-                <!-- Q5 -->
-                <div class="js-show-on-scroll fade-in-up delay-400 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden text-left text-left text-left">
-                    <button class="faq-btn w-full text-left p-8 flex justify-between items-center hover:bg-gold-50 transition-colors focus:outline-none group text-left text-left">
-                        <span class="font-bold text-xl text-gray-900 text-left text-left text-left">Q 出張撮影や地方での案件は可能ですか？</span>
-                        <i data-lucide="chevron-down" class="text-gold-500 transition-transform duration-500 text-left text-left"></i>
+                <div class="js-show-on-scroll fade-in-up delay-400 bg-bright rounded-2xl border border-gray-100 shadow-sm overflow-hidden text-left">
+                    <button class="faq-btn w-full text-left p-8 flex justify-between items-center hover:bg-gold-50 transition-colors focus:outline-none group">
+                        <span class="font-bold text-xl text-gray-900">Q 出張撮影や地方での案件は可能ですか？</span>
+                        <i data-lucide="chevron-down" class="text-gold-500 transition-transform duration-500"></i>
                     </button>
-                    <div class="faq-content hidden px-8 pb-8 text-gray-600 text-base leading-loose border-t border-gray-50 pt-6 font-serif text-left text-left text-left">
+                    <div class="faq-content hidden px-8 pb-8 text-gray-600 text-base leading-loose border-t border-gray-50 pt-6 font-serif">
                         A はい 可能です 全国どこへでも伺います 現地の熱量を最大限に引き出すシネマティックな映像制作を お約束いたします
                     </div>
                 </div>
@@ -480,42 +580,42 @@
     </section>
 
     <!-- CTA Section -->
-    <section id="cta" class="py-32 px-6 bg-white relative overflow-hidden text-center text-center">
-        <div class="max-w-4xl mx-auto text-center text-center">
-            <h2 class="js-show-on-scroll fade-in-up font-serif text-3xl md:text-6xl font-black text-gray-900 mb-12 leading-tight text-center text-center">
+    <section id="cta" class="py-32 px-6 bg-bright relative overflow-hidden text-center">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="js-show-on-scroll fade-in-up font-serif text-3xl md:text-6xl font-black text-gray-900 mb-12 leading-tight">
                 あなたのビジネスに<br>魂の宿る映像を
             </h2>
-            <div class="js-show-on-scroll scale-up delay-200 bg-white p-10 md:p-16 rounded-[4rem] shadow-[0_40px_100px_rgba(0,0,0,0.12)] border border-gray-100 relative overflow-hidden text-center text-center">
-                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-gold-400 via-gold-600 to-gold-400 text-center text-center text-center"></div>
-                <div class="bg-red-600 text-white px-8 py-3 rounded-full text-sm font-black mb-12 inline-block uppercase tracking-widest animate-pulse text-center">Special Offer</div>
-                <h3 class="text-2xl md:text-5xl font-black text-gray-900 mb-10 leading-snug text-center text-center">
+            <div class="js-show-on-scroll scale-up delay-200 bg-white p-10 md:p-16 rounded-[4rem] shadow-[0_40px_100px_rgba(0,0,0,0.12)] border border-gray-100 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-gold-400 via-gold-600 to-gold-400"></div>
+                <div class="bg-red-600 text-white px-8 py-3 rounded-full text-sm font-black mb-12 inline-block uppercase tracking-widest animate-pulse">Special Offer</div>
+                <h3 class="text-2xl md:text-5xl font-black text-gray-900 mb-10 leading-snug">
                     今ならLINEからのお問い合わせで<br>
-                    <span class="text-gold-500 text-4xl md:text-6xl border-b-8 border-gold-500/20 inline-block mt-4 pb-2 text-center text-center">「30分の無料壁打ちミーティング」</span><br>
+                    <span class="text-gold-500 text-4xl md:text-6xl border-b-8 border-gold-500/20 inline-block mt-4 pb-2">「30分の無料壁打ちミーティング」</span><br>
                     を実施中！
                 </h3>
-                <p class="text-2xl text-gray-500 mb-16 font-serif leading-relaxed text-center text-center">
+                <p class="text-2xl text-gray-500 mb-16 font-serif leading-relaxed">
                     映像の企画案から 具体的な機材選定まで<br>
                     渡辺竜平が直接アドバイスさせていただきます
                 </p>
-                <a href="#" class="inline-flex items-center justify-center gap-6 bg-line text-white px-16 py-8 rounded-full font-black text-2xl md:text-3xl transition-all hover:scale-105 shadow-2xl hover:shadow-line/40 text-center text-center">
-                    <i data-lucide="message-circle" class="w-10 h-10 text-center text-center"></i>
+                <a href="#" class="inline-flex items-center justify-center gap-6 bg-line text-white px-16 py-8 rounded-full font-black text-2xl md:text-3xl transition-all hover:scale-105 shadow-2xl hover:shadow-line/40">
+                    <i data-lucide="message-circle" class="w-10 h-10"></i>
                     LINEで無料相談をはじめる
                 </a>
-                <p class="text-sm text-gray-400 mt-12 tracking-[0.3em] font-bold uppercase text-center text-center">Open 24/7 Directly Answered by Ryohei Watanabe</p>
+                <p class="text-sm text-gray-400 mt-12 tracking-[0.3em] font-bold uppercase">Open 24/7 Directly Answered by Ryohei Watanabe</p>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 py-24 text-center px-6 text-center text-center">
-        <div class="font-serif text-3xl font-bold tracking-[0.5em] text-white mb-10 uppercase text-center text-center">Ryohei Watanabe</div>
-        <div class="w-24 h-1 bg-gold-500 mx-auto mb-10 text-center text-center text-center"></div>
-        <p class="text-xs text-gray-500 tracking-widest uppercase mb-4 text-center text-center">&copy; 2026 Ryohei Watanabe / Seven Seas Pictures All Rights Reserved</p>
-        <p class="text-[10px] text-gray-600 font-bold uppercase text-center text-center">Visual Direction & Educator</p>
+    <footer class="bg-gray-900 py-24 text-center px-6">
+        <div class="font-serif text-3xl font-bold tracking-[0.5em] text-white mb-10 uppercase">Ryohei Watanabe</div>
+        <div class="w-24 h-1 bg-gold-500 mx-auto mb-10"></div>
+        <p class="text-xs text-gray-500 tracking-widest uppercase mb-4">&copy; 2026 Ryohei Watanabe / Seven Seas Pictures All Rights Reserved</p>
+        <p class="text-[10px] text-gray-600 font-bold uppercase">Visual Direction & Educator</p>
     </footer>
 
     <!-- Floating Action Button -->
-    <a href="#cta" class="fixed bottom-8 right-8 bg-line text-white p-5 rounded-full shadow-[0_10px_30px_rgba(6,199,85,0.4)] z-50 hover:scale-110 transition-transform text-center text-center">
-        <i data-lucide="message-circle" class="w-10 h-10 text-center text-center"></i>
+    <a href="#cta" class="fixed bottom-8 right-8 bg-line text-white p-5 rounded-full shadow-[0_10px_30px_rgba(6,199,85,0.4)] z-50 hover:scale-110 transition-transform">
+        <i data-lucide="message-circle" class="w-10 h-10"></i>
     </a>
 
     <script>
